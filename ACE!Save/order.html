@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Now!</title>
+        <link rel="stylesheet" href="styleorder.css">
+    </head>
+    <body data-requires-account="true">
+        <script src="auth.js"></script>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu.html">SHOP</a></li>
+                <li><a href="registration-signin.html?return=order.html">CART <span class="cart-count" id="cart-count">0</span></a></li>
+            </ul>
+            <a href="registration-signin.html">
+            <button>Sign in</button>
+            </a>
+        </nav>
+        <main class="order-page">
+            <h1>Your Cart</h1>
+            <p class="shop-intro">Review your items, then enter your delivery details to place your order.</p>
+            <p id="store-message" class="store-message" role="status" aria-live="polite"></p>
+            <section class="cart-panel" aria-label="Shopping cart">
+                <p id="empty-cart" class="empty-cart" hidden>Your cart is empty. <a href="menu.html">Browse products</a> to get started.</p>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-summary">
+                    <strong>Subtotal</strong>
+                    <strong id="cart-total">₱0.00</strong>
+                </div>
+                <div class="cart-actions">
+                    <a class="secondary-button" href="menu.html">Continue shopping</a>
+                    <button id="clear-cart" class="secondary-button" type="button" hidden>Clear cart</button>
+                    <button id="checkout-start" class="primary-button" type="button" disabled>Proceed to checkout</button>
+                </div>
+            </section>
+            <form id="checkout-form" class="checkout-form" hidden>
+                <h2>Delivery Information</h2>
+                <div class="checkout-fields">
+                    <label>Full name
+                        <input name="customerName" type="text" autocomplete="name" required maxlength="100">
+                    </label>
+                    <label>Email
+                        <input name="email" type="email" autocomplete="email" required maxlength="150">
+                    </label>
+                    <label>Phone number
+                        <input name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="24">
+                    </label>
+                    <label class="address-field">Delivery address
+                        <textarea name="address" autocomplete="street-address" rows="3" required maxlength="300"></textarea>
+                    </label>
+                    <label class="address-field">Delivery instructions (optional)
+                        <textarea name="instructions" rows="2" maxlength="300"></textarea>
+                    </label>
+                </div>
+                <div class="cart-actions">
+                    <button class="primary-button" type="submit">Submit Order</button>
+                    <button id="checkout-cancel" class="secondary-button" type="button">Cancel</button>
+                </div>
+            </form>
+            <section id="order-confirmation" class="order-confirmation" aria-live="polite" hidden>
+                <h2>Order Tracking</h2>
+                <p id="order-message"></p>
+                <dl>
+                    <div><dt>Tracking number</dt><dd id="tracking-number"></dd></div>
+                    <div><dt>Estimated delivery</dt><dd id="estimated-delivery"></dd></div>
+                    <div><dt>Delivering to</dt><dd id="tracking-recipient"></dd></div>
+                    <div><dt>Address</dt><dd id="tracking-address"></dd></div>
+                </dl>
+                <p class="tracking-note">Keep your tracking number. This demo stores your latest order in this browser.</p>
+            </section>
+        </main>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms.html">Terms and Conditions</a> |
+        <a href="helpandsupport.html">Help & Support</a>
+    </h5>
+        <script src="store.js"></script>
+    </body>
+</html>

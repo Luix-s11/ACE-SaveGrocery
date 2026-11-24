@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notifications</title>
+        <link rel="stylesheet" href="stylenotifications.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home-signin.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu-signin.html">SHOP</a></li>
+                <li><a href="order-signin.html">CART</a></li>
+            </ul>
+            <div class="profile-container">
+            <button
+                type="button"
+                class="profile-circle"
+                id="profileBtn"
+                aria-label="Open profile menu"
+                aria-expanded="false"
+            >
+                U
+            </button>
+            <div class="profile-panel" id="profilePanel">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3 id="profile-name">Guest</h3>
+                        <p id="profile-email">Create an account</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="settings.html">Settings</a>
+                <a href="notifications.html">Notifications</a>
+                <hr>
+                <a href="home.html">
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutBtn"
+                >
+                    Log Out
+                </button>
+                </a>
+            </div>
+        </div>
+        </nav>
+        <main class="notifications-page">
+        <h1>Notifications</h1>
+        <hr>
+        <p id="notification-empty" class="notification-empty">No order notifications yet. Your order receipt and tracking details will appear here after checkout.</p>
+        <section id="latest-order-notification" class="order-notification" aria-labelledby="notification-order-title" hidden>
+            <div class="notification-heading">
+                <div>
+                    <p class="notification-eyebrow">ORDER UPDATE</p>
+                    <h2 id="notification-order-title">Your latest order</h2>
+                </div>
+                <div class="notification-heading-actions">
+                    <span id="notification-order-status" class="order-status"></span>
+                    <button id="clear-order-notification" class="delete-notification-button" type="button">Delete notification</button>
+                </div>
+            </div>
+            <dl class="order-details">
+                <div><dt>Tracking number</dt><dd id="notification-tracking-number"></dd></div>
+                <div><dt>Estimated delivery</dt><dd id="notification-estimated-delivery"></dd></div>
+                <div><dt>Ordered by</dt><dd id="notification-recipient"></dd></div>
+                <div><dt>Delivering to</dt><dd id="notification-address"></dd></div>
+                <div><dt>Order total</dt><dd id="notification-total"></dd></div>
+            </dl>
+            <h3>Receipt</h3>
+            <ul id="notification-order-items" class="notification-order-items"></ul>
+            <p id="notification-action-message" class="notification-action-message" role="status" aria-live="polite"></p>
+            <div id="notification-order-actions" class="notification-actions">
+                <button id="order-received" class="received-button" type="button">I received this order</button>
+                <button id="cancel-order" class="cancel-order-button" type="button">Cancel order</button>
+            </div>
+        </section>
+        </main>
+        <hr>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms-signin.html">Terms and Conditions</a> |
+        <a href="helpandsupport-signin.html">Help & Support</a>
+    </h5>
+    <script src="auth.js"></script>
+    <script src="profile-drop.js"></script>
+    <script src="store.js"></script>
+    </body>
+</html>

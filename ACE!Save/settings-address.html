@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+        <link rel="stylesheet" href="stylesettings.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home-signin.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu-signin.html">SHOP</a></li>
+                <li><a href="order-signin.html">CART</a></li>
+            </ul>
+            <div class="profile-container">
+            <button
+                type="button"
+                class="profile-circle"
+                id="profileBtn"
+                aria-label="Open profile menu"
+                aria-expanded="false"
+            >
+                U
+            </button>
+            <div class="profile-panel" id="profilePanel">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3 id="profile-name">Guest</h3>
+                        <p id="profile-email">Create an account</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="settings.html">Settings</a>
+                <a href="notifications.html">Notifications</a>
+                <hr>
+                <a href="home.html">
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutBtn"
+                >
+                    Log Out
+                </button>
+                </a>
+            </div>
+        </div>
+        </nav>
+        <div class="terms">
+        <h1>Settings</h1>
+        <a href = "settings.html"> <b>Account Details</b></a> |
+        <a href = "settings-address.html"> <b>Address</b></a> |
+        <a href = "settings-payment.html"> <b>Payment Method</b></a>
+        <hr>
+        <h2>Address</h2>
+        <label for="house-street">House/Building Number &amp; Street Name</label>
+        <input id="house-street" type="text" autocomplete="address-line1" required maxlength="150">
+        <br>
+        <br>
+        <label for="unit-building">Unit, Floor, or Building Name</label>
+        <input id="unit-building" type="text" autocomplete="address-line2" maxlength="150">
+        <br>
+        <br>
+        <label for="barangay-city-zip">Barangay, City/Municipality, &amp; ZIP Code</label>
+        <input id="barangay-city-zip" type="text" autocomplete="address-level2" required maxlength="180">
+        <br>
+        <br>
+        <label for="contact-number">Contact Number</label>
+        <input id="contact-number" type="tel" autocomplete="tel" required maxlength="20">
+        <br>
+        <br>
+        <button id="save-address-details" type="button">Save</button>
+        </div>
+        <hr>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms-signin.html">Terms and Conditions</a> |
+        <a href="helpandsupport-signin.html">Help & Support</a>
+    </h5>
+    <script src="saved.js"></script>
+    <script src="profile-drop.js"></script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="styleregistration.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu.html">SHOP</a></li>
+                <li><a href="registration-signin.html?return=order.html">CART</a></li>
+            </ul>
+            <a href="registration-signin.html">
+            <button>Sign in</button>
+            </a>
+        </nav>
+        <h1>Sign Up</h1>
+        <hr>
+        <form id="signup-form" class="auth-form">
+            <div class="form-row">
+                <label for="signup-first-name">First Name</label>
+                <input id="signup-first-name" name="firstName" type="text" autocomplete="given-name" required maxlength="60">
+            </div>
+            <div class="form-row">
+                <label for="signup-last-name">Last Name</label>
+                <input id="signup-last-name" name="lastName" type="text" autocomplete="family-name" required maxlength="60">
+            </div>
+            <div class="form-row">
+                <label for="signup-email">Email</label>
+                <input id="signup-email" name="email" type="email" autocomplete="email" required maxlength="150">
+            </div>
+            <div class="form-row">
+                <label for="signup-address">Address</label>
+                <input id="signup-address" name="address" type="text" autocomplete="street-address" required maxlength="300">
+            </div>
+            <div class="form-row">
+                <label for="signup-password">Password</label>
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" required minlength="8">
+            </div>
+            <div class="form-row">
+                <label for="signup-confirm-password">Confirm Password</label>
+                <input id="signup-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required minlength="8">
+            </div>
+            <div class="agreement">
+                <b>By signing up, I have read and agree to the</b>
+                <a href="terms.html"><b>Terms and Conditions</b></a>
+                <br><br>
+                <input type="checkbox" id="signup-terms" name="terms" required>
+                <label for="signup-terms">I agree.</label>
+            </div>
+            <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
+            <div class="button-container">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <br>
+        <hr>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms.html">Terms and Conditions</a> |
+        <a href="helpandsupport.html">Help & Support</a>
+    </h5>
+        <script src="auth.js"></script>
+    </body>
+</html>

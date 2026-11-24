@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop With Us!</title>
+        <link rel="stylesheet" href="stylemenu.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu.html">SHOP</a></li>
+                <li><a href="registration-signin.html?return=order.html">CART <span class="cart-count" id="cart-count">0</span></a></li>
+            </ul>
+            <a href="registration-signin.html">
+            <button>Sign in</button>
+            </a>
+        </nav>
+        <main class="shopping-page">
+            <h1>Shop</h1>
+            <p class="shop-intro">Choose a category to browse products, then add your items to the cart.</p>
+            <div class="shop-search" role="search">
+                <label for="shop-search-input">Search the shop</label>
+                <div class="search-input-row">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input
+                        id="shop-search-input"
+                        type="search"
+                        placeholder="Search products, categories, or descriptions..."
+                        autocomplete="off"
+                        aria-controls="product-categories"
+                    >
+                    <button id="shop-search-clear" class="search-clear-button" type="button" hidden>Clear</button>
+                </div>
+                <p id="shop-search-status" class="search-status" role="status" aria-live="polite"></p>
+            </div>
+            <div id="product-categories" class="category-browser"></div>
+            <p id="store-message" class="store-message" role="status" aria-live="polite"></p>
+        </main>
+        <hr>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms.html">Terms and Conditions</a> |
+        <a href="helpandsupport.html">Help & Support</a>
+    </h5>
+        <script src="store.js"></script>
+    </body>
+</html>

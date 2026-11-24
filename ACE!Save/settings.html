@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+        <link rel="stylesheet" href="stylesettings.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "home-signin.html">
+                    <img src="images/ACE!Save.jpg" alt="ACE!Save">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu-signin.html">SHOP</a></li>
+                <li><a href="order-signin.html">CART</a></li>
+            </ul>
+            <div class="profile-container">
+            <button
+                type="button"
+                class="profile-circle"
+                id="profileBtn"
+                aria-label="Open profile menu"
+                aria-expanded="false"
+            >
+                U
+            </button>
+            <div class="profile-panel" id="profilePanel">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3 id="profile-name">Guest</h3>
+                        <p id="profile-email">Create an account</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="settings.html">Settings</a>
+                <a href="notifications.html">Notifications</a>
+                <hr>
+                <a href="home.html">
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutBtn"
+                >
+                    Log Out
+                </button>
+                </a>
+            </div>
+        </div>
+        </nav>
+        <div class="terms">
+        <h1>Settings</h1>
+        <a href = "settings.html"> <b>Account Details</b></a> |
+        <a href = "settings-address.html"> <b>Address</b></a> |
+        <a href = "settings-payment.html"> <b>Payment Method</b></a>
+        <hr>
+        <h2>Account Details</h2>
+        <label>First Name</label>
+        <input id="first-name" type="text" value="" required maxlength="60">
+        <br>
+        <br>
+        <label>Last Name</label>
+        <input id="last-name" type="text" value="" required maxlength="60">
+        <br>
+        <br>
+        <label>Email</label>
+        <input id="email" type="email" value="" required maxlength="150">
+        <br>
+        <br>
+        <label for="account-password">Password</label>
+        <input id="account-password" type="password" value="********" readonly autocomplete="off" aria-describedby="password-note">
+        <p id="password-note">Your password is securely hashed and cannot be viewed here.</p>
+        <br>
+        <br>
+        <button id="save-account-details" type="button">Save</button>
+        </div>
+        <hr>
+    <h5>
+        © 2026 ACE Incorporation. All rights reserved.
+        <br>
+        <hr class="short-line">
+        <a href="terms-signin.html">Terms and Conditions</a> |
+        <a href="helpandsupport-signin.html">Help & Support</a>
+    </h5>
+    <script src="saved.js"></script>
+    <script src="profile-drop.js"></script>
+    </body>
+</html>
